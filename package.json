@@ -1,0 +1,21 @@
+{
+  "name": "simple-scrum-poker",
+  "version": "1.0.0",
+  "main": "gh-pages/index.html",
+  "author": "Alexander Ruppert",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel serve src/index.pug",
+    "build": "parcel build src/index.pug --dist-dir gh-pages --no-cache --no-source-maps --public-url \"./\"",
+    "gh": "node publish.js"
+  },
+  "browserslist": "defaults, not IE 11",
+  "devDependencies": {
+    "@prettier/plugin-pug": "^1.7.0",
+    "parcel": "^2.0.0-beta.1",
+    "parcel-plugin-inliner": "^1.0.14",
+    "prettier": "^2.1.2",
+    "pug": "^3.0.0",
+    "stylus": "^0.54.8"
+  }
+}
