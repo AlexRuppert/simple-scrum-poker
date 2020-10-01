@@ -9,63 +9,49 @@ body
   background-color #333
   color #fff
   text-shadow 0 0 5px rgba(0, 0, 0, 0.36)
-  font-weight 400
+  font 60px sans-serif
   font-weight 600
-  font-size 60px
-  font-family -apple-system, 'Segoe UI', 'Helvetica Neue', sans-serif
   perspective 1000px
-  text-rendering geometricPrecision
 
-$dim = 100px
+$dim = 120px
+$colors = '0' #86a, '1' #27e, '2' #09a, '3' #079, '5' #088, '8' #086, '13' #d5b, '20' #c57, '40' #c75, '100' #112
 
 a
   color inherit
   text-decoration none
+  transition all 0.2s ease-in
 
-.card
-  display block
+body > a
   margin 5px
-  padding 10px
   width $dim
-  height $dim * 1.2
   border-radius 8px
-  box-shadow 0 2px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 8px 0 rgba(0, 0, 0, 0.26)
   line-height $dim * 1.2
-  transition all 0.2s ease-in-out
   transform-origin top
 
   &:active
-    box-shadow 0 5px 8px 0 rgba(0, 0, 0, 0.16), 0 5px 13px 0 rgba(0, 0, 0, 0.16)
-    transform rotateX(20deg) scale(1, 0.9) translate(0, 5px)
+    box-shadow 0 5px 10px 0 rgba(0, 0, 0, 0.26)
+    transform rotateX(20deg) translate(0, 5px)
 
-.c
+body, a
   display flex
   justify-content center
   align-content center
 
-.modal
+div > a
   position fixed
   top -100%
   right 0
   bottom 100%
   left 0
-  z-index 999
-  display flex
-  justify-content center
-  align-content center
   overflow hidden
-  background-color rgba(0, 0, 0, 0.6)
   font-size 62vw
   line-height 100vh
-  transition all 0.2s ease-in
 
   &:target
     top 0
     bottom 0
     pointer-events all
 
-$colors = '0' #845EC2, '1' #2C73D2, '2' #0081CF, '3' #0089BA, '5' #008E9B, '8' #008F7A, '13' #D65DB1, '20' #FF6F91, '40' #FF9671, '100' #271811
-
-for color in $colors
-  [data-color={'"' + color[0] + '"'}]
+for color, i in $colors
+  a:nth-child({i + 1})
     background color[1]

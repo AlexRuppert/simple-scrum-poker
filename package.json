@@ -12,6 +12,7 @@
   "browserslist": "defaults, not IE 11",
   "devDependencies": {
     "@prettier/plugin-pug": "^1.7.0",
+    "cssnano-preset-advanced": "^4.0.7",
     "parcel": "^2.0.0-beta.1",
     "parcel-plugin-inliner": "^1.0.14",
     "prettier": "^2.1.2",
