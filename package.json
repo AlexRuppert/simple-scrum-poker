@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "parcel serve src/index.pug",
     "build": "parcel build src/index.pug --dist-dir gh-pages --no-cache --no-source-maps --public-url \"./\"",
+    "postbuild": "workbox generateSW & cp -r static/* gh-pages/",
     "gh": "node publish.js"
   },
   "browserslist": "defaults, not IE 11",
@@ -18,7 +19,12 @@
     "parcel-plugin-inliner": "^1.0.14",
     "prettier": "^2.1.2",
     "pug": "^3.0.0",
-    "stylus": "^0.54.8"
+    "stylus": "^0.54.8",
+    "workbox-cli": "^5.1.4"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "staticFiles": {
+    "staticPath": "static",
+    "watcherGlob": "**"
+  }
 }
