@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "parcel serve src/index.pug",
     "build": "parcel build src/index.pug --dist-dir gh-pages --no-cache --no-source-maps --public-url \"./\"",
+    "prebuild": "rm -r gh-pages",
     "postbuild": "workbox generateSW & cp -r static/* gh-pages/",
     "gh": "node publish.js"
   },

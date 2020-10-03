@@ -10,7 +10,7 @@
   "removeComments": "all",
   "removeRedundantAttributes": true,
   "removeEmptyAttributes": true,
-  "removeUnusedCss": {},
+  
   "minifyCss": {
     "preset": "advanced"
   },
